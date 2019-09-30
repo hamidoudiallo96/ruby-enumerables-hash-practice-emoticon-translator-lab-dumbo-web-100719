@@ -24,6 +24,11 @@ def get_japanese_emoticon(file,emoticon)
   return convert_emoticon
 end
 
-def get_english_meaning
-  # code goes here
+def get_english_meaning(file,emoticon)
+  ymal_hash = load_library(file)
+  convert_emoticon = ymal_hash[:get_meaning][emoticon]
+  if convert_emoticon == nil
+    convert_emoticon =  "Sorry, that emoticon was not found"
+  end
+  return convert_emoticon
 end
