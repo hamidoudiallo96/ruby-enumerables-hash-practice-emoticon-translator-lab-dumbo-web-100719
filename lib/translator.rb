@@ -19,7 +19,7 @@ def get_japanese_emoticon(file,emoticon)
   ymal_hash = load_library(file)
   convert_emoticon = ymal_hash[:get_emoticon][emoticon]
   if convert_emoticon == nil
-    convert_emoticon =  "Sorry, that emoticon was nott found"
+    convert_emoticon =  "Sorry, that emoticon was not found"
   end
   return convert_emoticon
 end
