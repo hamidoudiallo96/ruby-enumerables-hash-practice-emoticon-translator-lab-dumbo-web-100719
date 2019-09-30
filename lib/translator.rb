@@ -9,8 +9,8 @@ def load_library(file)
   ymal_hash[:get_emoticon] = Hash.new
   
   file_path.each do |eng_meaning,jap_meaning|
-    ymal_hash[:get_meaning][eng_meaning] = jap_meaning
-    ymal_hash[:get_emoticon][jap_meaning.first] = eng_meaning
+    ymal_hash[:get_meaning][jap_meaning.first] = jap_meaning.last
+    ymal_hash[:get_emoticon][jap_meaning.last] = eng_meaning
     
   end
   return ymal_hash
