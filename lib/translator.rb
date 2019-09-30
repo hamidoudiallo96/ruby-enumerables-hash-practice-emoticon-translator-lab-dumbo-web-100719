@@ -12,7 +12,8 @@ def load_library(file)
     # ymal_hash[:get_meaning]= jap_meaning
     # ymal_hash[:get_emoticon]= eng_meaning
     p eng_meaning
-    p jap_meaning
+    p jap_meaning.first
+    p jap_meaning.last
   end
   return ymal_hash
 end
