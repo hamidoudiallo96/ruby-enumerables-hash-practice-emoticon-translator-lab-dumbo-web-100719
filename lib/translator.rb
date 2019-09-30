@@ -1,9 +1,9 @@
 # require modules here
 require "yaml"
-
+file = './lib/emoticons.yml'
 def load_library(file)
   # code goes here
-  file_path = YAML.load_file('./lib/emoticons.yml')
+  file_path = YAML.load_file(file)
   ymal_hash = Hash.new
   ymal_hash[:get_meaning] = Hash.new
   ymal_hash[:get_emoticon] = Hash.new
