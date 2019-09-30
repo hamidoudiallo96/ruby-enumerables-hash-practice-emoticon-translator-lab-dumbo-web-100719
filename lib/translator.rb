@@ -11,13 +11,17 @@ def load_library(file)
   file_path.each do |eng_meaning,jap_meaning|
     ymal_hash[:get_meaning][jap_meaning.last] = eng_meaning
     ymal_hash[:get_emoticon][jap_meaning.first] = jap_meaning.last
-    
   end
   return ymal_hash
 end
 
-def get_japanese_emoticon
-  # code goes here
+def get_japanese_emoticon(file,emoticon)
+  ymal_hash = load_file(file)
+  convert_emoticon = ymal_hash[:get_meaning][emoticon]
+  if convert_emoticon == nil
+    return "Our apologies, the emoticon is not available."
+  end
+  return convert_emoticon
 end
 
 def get_english_meaning
