@@ -22,7 +22,7 @@ def get_japanese_emoticon(file,emoticon)
   if convert_emoticon == nil
     convert_emoticon =  "Our apologies, the emoticon is not available."
   end
-  return convert_emoticon
+  
 end
 
 def get_english_meaning
